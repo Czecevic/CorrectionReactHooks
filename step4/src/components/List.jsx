@@ -20,6 +20,7 @@ const List = (props) => {
     const eventDeleteList = (id) => {
         inputCopy.splice(id, 1)
         setValue(inputCopy)
+        console.log(value[id].Check)
     }
 
     return (
@@ -27,7 +28,7 @@ const List = (props) => {
             {value.map((OnlyOneValue, id) => {
                 return (
                     <ul key={id}>
-                        <input type="checkbox" checked={value.Check} onChange={() => eventCheck(id)}/>
+                        <input type="checkbox" checked={value[id].Check} onChange={() => eventCheck(id)}/>
                         <li>{OnlyOneValue.name}</li>
                         <button className="remove" onClick={() => eventDeleteList(id)}>X</button>
                     </ul>

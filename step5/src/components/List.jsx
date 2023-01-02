@@ -5,11 +5,6 @@ import { ProgressBar } from "./ProgressBar";
 const List = (props) => {
     const {value, setValue, check, setCheck} = props
     const inputCopy = [...value]
-    const styleBar = {
-        height: '20px',
-        background: '#eee'
-    }
-    
     const eventCheck = (id) => {
         inputCopy[id].Check = !inputCopy[id].Check
         setCheck(inputCopy)
@@ -33,7 +28,7 @@ const List = (props) => {
             {value.map((OnlyOneValue, id) => {
                 return (
                     <ul key={id}>
-                        <input type="checkbox" checked={value.Check} onChange={() => eventCheck(id)}/>
+                        <input type="checkbox" checked={value[id].Check} onChange={() => eventCheck(id)}/>
                         <li>{OnlyOneValue.name}</li>
                         <button className="remove" onClick={() => eventDeleteList(id)}>X</button>
                     </ul>

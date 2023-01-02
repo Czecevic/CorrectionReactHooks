@@ -1,0 +1,78 @@
+@import "bootstrap.min.css";
+
+:root {
+  --background: #F9F4EB;
+  --blue:       #6CBBC7;
+  --red-r:      255;
+  --red-g:      66;
+  --red-b:      29;
+
+  --red:        rgb(var(--red-r), var(--red-g), var(--red-b));
+}
+
+html, body, #root, #root > div { 
+  min-height: 100vh; 
+  margin: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+/* Overwritten Bootstrap classes */
+
+.bg-light {
+    background-color: var(--background)!important;
+}
+
+.btn-primary {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
+}
+
+.btn-primary:hover, .btn-primary:active {
+    background-color: transparent;
+    color: var(--blue);
+}
+
+.btn-primary:disabled, .btn-primary:disabled:hover {
+    color:white;
+    background-color: #aaaaaa;
+    border: 1px solid #aaaaaa;
+}
+
+.btn-secondary {
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    font-weight: bolder;
+}
+.btn-secondary:hover, .btn-secondary:active {
+    background-color: transparent;
+    color: var(--red);
+
+    border: 1px solid var(--red);
+}
+
+
+/* Dark-theme */
+
+.theme-dark {
+  background: #444444;
+  color: white;
+}
+
+.theme-dark .bg-white {
+  background: #111111 !important;
+  color: white;
+}
+
+.theme-dark .bg-light {
+  background: #333333 !important;
+  color: white;
+}
+
