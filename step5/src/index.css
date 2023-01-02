@@ -1,76 +1,78 @@
+@import "bootstrap.min.css";
+
 :root {
-  font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 24px;
-  font-weight: 400;
+  --background: #F9F4EB;
+  --blue:       #6CBBC7;
+  --red-r:      255;
+  --red-g:      66;
+  --red-b:      29;
 
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-text-size-adjust: 100%;
+  --red:        rgb(var(--red-r), var(--red-g), var(--red-b));
 }
 
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
+html, body, #root, #root > div { 
+  min-height: 100vh; 
+  margin: 0;
 }
 
 body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
+
+/* Overwritten Bootstrap classes */
+
+.bg-light {
+    background-color: var(--background)!important;
 }
 
-ul {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
+.btn-primary {
+    background-color: var(--blue);
+    border: 1px solid var(--blue);
 }
 
-.remove {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.3em 0.5em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-.remove:hover {
-  border-color: #646cff;
-}
-.remove:focus,
-.remove:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+.btn-primary:hover, .btn-primary:active {
+    background-color: transparent;
+    color: var(--blue);
 }
 
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  .remove {
-    background-color: #f9f9f9;
-  }
+.btn-primary:disabled, .btn-primary:disabled:hover {
+    color:white;
+    background-color: #aaaaaa;
+    border: 1px solid #aaaaaa;
 }
+
+.btn-secondary {
+    background-color: var(--red);
+    border: 1px solid var(--red);
+    font-weight: bolder;
+}
+.btn-secondary:hover, .btn-secondary:active {
+    background-color: transparent;
+    color: var(--red);
+
+    border: 1px solid var(--red);
+}
+
+
+/* Dark-theme */
+
+.theme-dark {
+  background: #444444;
+  color: white;
+}
+
+.theme-dark .bg-white {
+  background: #111111 !important;
+  color: white;
+}
+
+.theme-dark .bg-light {
+  background: #333333 !important;
+  color: white;
+}
+
