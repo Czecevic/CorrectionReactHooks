@@ -4,7 +4,7 @@ import { useState } from 'react';
 
 
 function App() {
-  const [items, setItems] = useState(getDataFromStorage());
+  const [items, setItems] = useState([]);
   const [current, setCurrent] = useState(null);
 
   return (
@@ -32,12 +32,6 @@ function App() {
       </div>
     </div>
   )
-}
-
-function getDataFromStorage() {
-  const stored = localStorage.getItem("items");
-
-  return JSON.parse(stored) || [];
 }
 
 
