@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import AddList from './components/addList'
+import { AddList } from './components/addList'
 import './App.css'
 
 function App() {
