@@ -1,7 +1,6 @@
-import React from "react";
 
 
-const addList = (props) => {
+export const AddList = (props) => {
     const {value, setValue} = props
 
     const eventAddList = (event) => {
@@ -29,5 +28,3 @@ const addList = (props) => {
         </div>
     )
 }
-
-export default addList
